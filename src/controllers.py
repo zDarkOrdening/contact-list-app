@@ -13,7 +13,7 @@ def add_contact():
     name, phone, email = get_contact_data()
     contact = Contact(name, phone, email)
     contacts_list.contacts.append(contact)
-    print(f"\nSuccess on add {name}.\n")
+    print(f"\nSuccess on add {name}.")
 
 
 def show_contacts():
@@ -32,7 +32,7 @@ def edit_contact():
         if contact is not None:
             name, phone, email = get_contact_edit_data()
             contact.edit_contact(name, phone, email)
-            print(f"\nSucces on updating contact {choose + 1}.")
+            print(f"\nSuccess on updating contact {choose + 1}.")
 
 
 def mark_or_unmark_contact():
@@ -42,7 +42,7 @@ def mark_or_unmark_contact():
         contact = contacts_list.find_contact(choose)
         if contact:
             contact.mark_or_unmark_contact()
-            print(f"\nSucces on mark/unmark contact {choose + 1} as favorite.")
+            print(f"\nSuccess on mark/unmark contact {choose + 1} as favorite.")
 
 
 def delete_contact():

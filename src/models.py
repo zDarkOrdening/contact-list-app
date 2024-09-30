@@ -31,7 +31,7 @@ class List:
         if 0 <= index < len(self.contacts):
             return self.contacts[index]
         else:
-            print("Contact not found.")
+            print("\nContact not found.")
             return None
 
     def delete_contact(self, index):

@@ -23,8 +23,8 @@ def get_contact_data():
 
 def display_contacts(contacts, favorite_only=False):
     counter = 0
-    if not contacts:
-        print("\nNo contacts to show.\n")
+    if not contacts and not favorite_only:
+        print("\nNo contacts to show.")
         return False
 
     for index, contact in enumerate(contacts):
@@ -36,7 +36,7 @@ def display_contacts(contacts, favorite_only=False):
         )
         counter += 1
     if counter <= 0:
-        print("\nNo favorite contacts to show.\n")
+        print("\nNo favorite contacts to show.")
         return False
     return True
 
@@ -50,5 +50,10 @@ def get_contact_edit_data():
 
 
 def choose_contact():
-    choose = int(input("\nPlease choose the contact you want: "))
+    while True:
+        try:
+            choose = int(input("\nPlease choose the contact you want: "))
+            break
+        except ValueError:
+            print("\nInvalid option. Please try again.")
     return choose
